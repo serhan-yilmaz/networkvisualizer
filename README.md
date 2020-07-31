@@ -1,4 +1,4 @@
 # NetViz
-NetViz is a highly customizable graph visualization library in Matlab.
+NetViz is a highly customizable graph visualization library for Matlab.
 
 
