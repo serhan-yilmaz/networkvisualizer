@@ -12,6 +12,7 @@ plot(net)
 
 ## Tutorial
 For instructions on how to generate a highly customized figure like the one below, see the [tutorial document](tutorial.pdf).
+
 <img src="sample_output/tutorial_network.png" width="600">
 
 ## Demos
