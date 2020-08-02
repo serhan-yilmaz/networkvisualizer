@@ -115,6 +115,9 @@ classdef networkvisualizer < handle
         function [obj] = setNodeLabels(obj, values, classes, cname)
             if(nargin < 3); classes = []; end
             if(nargin < 4); cname = []; end
+            if(strcmpi(values, 'auto'))
+                values = regexprep(cellstr(num2str((1:obj.nNode)')), ' ', '');
+            end
             obj = setProperty(obj, values, classes, cname, 'NodeLabels');
         end
         
@@ -275,6 +278,9 @@ classdef networkvisualizer < handle
         
         function [obj] = setProperty(obj, values, classes, cname, property)
            if(isempty(classes))
+               if((size(obj.(property), 2) == 1) && isrow(values))
+                   values = values';
+               end
                if(size(values, 1) == 1)
                     values = repmat(values, obj.nNode, 1);
                end
