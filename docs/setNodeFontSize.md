@@ -49,7 +49,7 @@ net = setNodeFontSize(net, 9.5, 'M');
 ```
 which produces:
 
-<img src="examples/setNodeLabels-2.png" width="300">
+<img src="examples/setNodeFontSize-2.png" width="300">
 
 ### See Also
 [addNodeClass](addNodeClass.md), [setNodeLabels](setNodeLabels.md)
