@@ -11,6 +11,8 @@ function [x, y] = networklayout( W, nodeSizes )
     w = full(W);
     numStep = 1000;
     stepSizes = logspace(-1, -3, numStep);
+%     stepSizes = [stepSizes, 1e-3*ones(1,6000)];
+%     numStep = length(stepSizes);
     for i = 1:numStep
         stepSize = stepSizes(i);
         x(x>=1.02) = 1.0;
@@ -47,5 +49,7 @@ function [x, y] = networklayout( W, nodeSizes )
         x = x + a;
         y = y + b;
     end
+    x = x';
+    y = y';
 end
 

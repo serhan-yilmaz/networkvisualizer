@@ -44,8 +44,10 @@ function [] = drawnetwork( x, y, nodeSizes, W, axis, varargin)
         nodeLabels = repmat({}, nNode, 1);
     end
     
+%     nodeWidth = 2*nodeSizes;
     nodeWidth = nodeSizes;
     nodeHeight = nodeSizes;
+%     nodeHeight = 2*nodeSizes;
     
     textOpts = struct();
     textOpts.HorizontalAlignment = 'center';
@@ -60,10 +62,10 @@ function [] = drawnetwork( x, y, nodeSizes, W, axis, varargin)
     end
     
     gap = param.OuterGap;
-    aMin = min(x)-gap;
-    aMax = max(x)+gap;
-    bMin = min(y)-gap;
-    bMax = max(y)+gap;
+    aMin = min(x - nodeWidth/2)-gap;
+    aMax = max(x + nodeWidth/2)+gap;
+    bMin = min(y - nodeHeight/2)-gap;
+    bMax = max(y + nodeHeight/2)+gap;
     aRange = aMax - aMin;
     bRange = bMax - bMin;
     cRange = max(aRange, bRange);
@@ -77,21 +79,22 @@ function [] = drawnetwork( x, y, nodeSizes, W, axis, varargin)
     yFactor = yMax - yMin;
     
     if(~isAxisSpecified)
-        clf();
         axis = gca();
     end
+    cla(axis);
     
     if(param.FitNodeSizes)
-        padding = 0.05;
+        hpadding = 0.05;
+        vpadding = 0.01;
         xlim(axis, [0 1]);
         ylim(axis, [0 1]);
         for iNode = 1:nNode
             if(~isempty(nodeLabels{iNode}))
-                linewidth = nodeLineWidth(iNode)/2*1;
+                linewidth = nodeLineWidth(iNode)/2;
                 textOpts.FontSize = nodeFontSize(iNode);
                 [width, height] = measureText(nodeLabels{iNode}, textOpts, axis);
-                width = (width*(1+padding) + linewidth/100) * xFactor;
-                height = (height*(1+padding) + linewidth/100) * yFactor;
+                width = (width*(1+hpadding) + linewidth/100) * xFactor;
+                height = (height*(1+vpadding) + linewidth/100) * yFactor;
                 nodeWidth(iNode) = max(width, nodeWidth(iNode));
                 nodeHeight(iNode) = max(height, nodeHeight(iNode));
             end
@@ -134,8 +137,16 @@ function [] = drawnetwork( x, y, nodeSizes, W, axis, varargin)
         edgeLineWidth = repmat(0.65 * [1 1 1], nEdge, 1);
     end
     
+    rWidth = xMax - xMin;
+    rHeight = yMax - yMin;
+    gap = 0.002;
+    rXMin = xMin + rWidth * gap;
+    rXMax = xMax - rWidth * gap;
+    rYMin = yMin + rHeight * gap;
+    rYmax = yMax - rHeight * gap;
+    
     hold(axis, 'on');
-    rectangle(axis, 'Position', [xMin yMin (xMax-xMin) (yMax-yMin)], 'FaceColor', [1 1 1]);
+    rectangle(axis, 'Position', [rXMin rYMin (rXMax-rXMin) (rYmax-rYMin)], 'FaceColor', [1 1 1], 'EdgeColor', [0.7 0.7 0.7]);
 %     rectangle(axis, 'Position', [-0.2 -0.2 1.4 1.4], 'FaceColor', [1 1 1], 'EdgeColor', [1 1 1]);
 %     rectangle(axis, 'Position', [xMin yMin (xMax-xMin) (yMax-yMin)], 'FaceColor', [1 1 1], 'EdgeColor', [1 1 1]);
 %     rectangle(axis, 'Position', [-0.1 -0.1 1.2 1.2], 'FaceColor', [1 1 1], 'EdgeColor', [1 1 1]);
@@ -151,8 +162,9 @@ function [] = drawnetwork( x, y, nodeSizes, W, axis, varargin)
             indices2 = i2(ind);
             linewidth = edgeLineWidth(ib(iGroup));
             color = edgeColors(ib(iGroup), :);
-            plot(axis, [x(indices1); x(indices2)], ...
-                [y(indices1); y(indices2)], '-', ...
+            
+            plot(axis, [x(indices1), x(indices2)]', ...
+                [y(indices1), y(indices2)]', '-', ...
                 'Color', color, 'LineWidth', linewidth);
         end
 %         plot(axis, [x(i1); x(i2)]', [y(i1); y(i2)]', '-', 'Color', [0.65 0.65 0.65]);
@@ -198,17 +210,17 @@ function [] = drawnetwork( x, y, nodeSizes, W, axis, varargin)
     if(param.DrawOuterRectangle)
         rWidth = xMax - xMin;
         rHeight = yMax - yMin;
-        gap = 0.001;
+        gap = 0.005;
         rXMin = xMin + rWidth * gap;
         rXMax = xMax - rWidth * gap;
         rYMin = yMin + rHeight * gap;
         rYmax = yMax - rHeight * gap;
         
-        rectangle(axis, ...
-            'Position', [rXMin rYMin (rXMax-rXMin) (rYmax-rYMin)], ...
-            'FaceColor', 'none', ...
-            'EdgeColor', [0.7 0.7 0.7], ...
-            'LineWidth', 0.75);
+%         rectangle(axis, ...
+%             'Position', [rXMin rYMin (rXMax-rXMin) (rYmax-rYMin)], ...
+%             'FaceColor', 'none', ...
+%             'EdgeColor', [0.7 0.7 0.7], ...
+%             'LineWidth', 0.75);
     end
     
     xlim(axis, [xMin xMax]);

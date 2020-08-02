@@ -1,4 +1,7 @@
-classdef networkvisualizer <  handle
+classdef networkvisualizer < handle
+    % To do ...
+    % Add a legend entry based on the node colors
+    
     properties (SetAccess = private)
         X
         Y
@@ -21,7 +24,7 @@ classdef networkvisualizer <  handle
         EdgeLineWidth
         nNode
         nEdge
-        OuterGap = 0.07;
+        OuterGap = 0.05;
         drawOuterRectangle = true;
         isDirected = false;
     end
@@ -47,6 +50,9 @@ classdef networkvisualizer <  handle
         function [obj] = dolayout(obj, nodeSizes)
             if(nargin < 2)
                 nodeSizes = obj.NodeSizes;
+            end
+            if(isscalar(nodeSizes))
+                nodeSizes = repmat(nodeSizes, obj.nNode, 1);
             end
             [obj.X, obj.Y] = networklayout(obj.Network, nodeSizes);
         end
@@ -97,6 +103,13 @@ classdef networkvisualizer <  handle
                 obj.NodeSizeAuto = false;
                 obj = setProperty(obj, values, classes, cname, 'NodeSizes');
             end
+        end
+        
+        function [obj] = scaleNodeSizes(obj, values, coef)
+            if(nargin < 3); coef = 1; end
+            coeff = sqrt(coef*1200 / obj.nNode) / mean(values);
+            values = values * coeff;
+            obj = setNodeSizes(obj, values);
         end
         
         function [obj] = setNodeLabels(obj, values, classes, cname)
@@ -201,7 +214,7 @@ classdef networkvisualizer <  handle
     methods (Access = private)
         function [nodesizes] = getdefaultNodeSizes(obj)
             nNodes = size(obj.Network, 1);
-            nodecoeff = 1 + sqrt(1200/nNodes);
+            nodecoeff = sqrt(1800/nNodes);
             nodesizes = repmat(nodecoeff, nNodes, 1);
         end
         
