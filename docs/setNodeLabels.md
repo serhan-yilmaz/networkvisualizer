@@ -31,7 +31,8 @@ net = setNodeLabels(net, labels);
 plot(net);
 ```
 which produces:
-<img src="examples/setNodeLabels-1.png" width="500">
+
+<img src="examples/setNodeLabels-1.png" width="300">
 
 ### See Also
 [addNodeClass](addNodeClass.md)
