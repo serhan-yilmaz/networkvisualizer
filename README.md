@@ -23,3 +23,6 @@ For instructions on how to generate a highly customized figure like the one belo
 
 <img src="sample_output/demo1_network.png" width="600">
 
+### Demo 2: Protein-Protein Interaction (PPI) Network
+
+<img src="sample_output/demo2_network.png" width="600">
