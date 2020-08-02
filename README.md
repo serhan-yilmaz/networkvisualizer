@@ -18,3 +18,8 @@ For instructions on how to generate a highly customized figure like the one belo
 <img src="sample_output/tutorial_network.png" width="600">
 
 ## Demos
+
+### Demo 1: Correlation Network
+
+<img src="sample_output/demo1_network.png" width="600">
+
