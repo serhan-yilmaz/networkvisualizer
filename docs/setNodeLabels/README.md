@@ -15,3 +15,4 @@ net = setNodeLabels(net, classlabels, cvalues, cname)
 * ```cvalues```: A vector specifying the class values which the modifications will apply.
 * ```cname```: A string that specifies the node class to be used for mappping ```cvalues``` to nodes.
 
+### Description
