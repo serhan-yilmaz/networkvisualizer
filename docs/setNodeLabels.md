@@ -38,11 +38,10 @@ which produces:
 #### Updating labels using node classes
 
 ```Matlab
-cvalues = {'M', 'L', 'K', 'M', 'M'}';
-net = addNodeClass(net, cvalues);
-net = setNodeLabels(net, {'Class M'}, 'M');
-net = setNodeFontSize(net, 12, 'M');
-plot(net);
+categories = {'M', 'L', 'K', 'M', 'M'}';
+net = addNodeClass(net, categories);
+net = setNodeLabels(net, {'Category M'}, 'M');
+net = setNodeFontSize(net, 9.5, 'M');
 ```
 which produces:
 
