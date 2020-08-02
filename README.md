@@ -10,6 +10,8 @@ plot(net)
 
 ## Documentation
 
+For more detailed information, see the [documentation](docs/setNodeLabels.md).
+
 ## Tutorial
 For instructions on how to generate a highly customized figure like the one below, see the [tutorial document](tutorial.pdf).
 
