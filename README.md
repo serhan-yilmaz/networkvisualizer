@@ -1,5 +1,5 @@
 # networkvisualizer
-A graph visualization library in Matlab that provides customization tools to generate pretty network figures easily.
+A graph visualization library in Matlab that provides customization tools to easily generate some pretty network figures.
 
 ## Getting Started
 
