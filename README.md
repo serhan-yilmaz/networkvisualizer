@@ -5,3 +5,7 @@ A customizable graph visualization library in Matlab.
 net = networkvisualizer(W);
 plot(net)
 ```
+
+## Tutorial
+
+<img src="sample_output/tutorial_network.png" width="600">
