@@ -50,6 +50,6 @@ which produces:
 <img src="examples/setNodeLabels-2.png" width="300">
 
 ### See Also
-[addNodeClass](addNodeClass.md)
+[networkvisualizer](networkvisualizer.md), [addNodeClass](addNodeClass.md)
 
 
