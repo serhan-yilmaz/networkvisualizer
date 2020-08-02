@@ -3,22 +3,21 @@ Set the node labels of a networkvisualizer object.
 
 ### Syntax
 ```Matlab
-net = setNodeLabels(net, nodelabels)
-net = setNodeLabels(net, classlabels, cvalues)
-net = setNodeLabels(net, classlabels, cvalues, cname)
+net = setNodeLabels(net, values)
+net = setNodeLabels(net, values, categories)
+net = setNodeLabels(net, values, categories, classname)
 ```
 
 ### Arguments
 * ```net```: Networkvisualizer object created with function [networkvisualizer](networkvisualizer.md).
-* ```nodelabels```: A cell array containing the node labels to be displayed for each node.
-* ```classlabels```: A cell array containing the class labels to be set for each class value specified in ```cvalues```.
-* ```cvalues```: A vector specifying the class values which the modifications will apply.
-* ```cname```: A string that specifies the node class to be used for mappping ```cvalues``` to nodes.
+* ```values```: A cell array containing the node labels to be displayed.
+* ```categories```: A vector specifying the class categories which the modifications will apply.
+* ```classname```: A string that specifies which node class the given ```categories``` correspond to.
 
 ### Description
-* ```net = setNodeLabels(net, nodelabels)``` sets the node label of every node ```i``` to the string provided in ```nodelabels{i}```. Thus, the ```nodelabels``` should be cell array of length equal to the number of nodes. 
-* ```net = setNodeLabels(net, classlabels, cvalues)``` uses the node class values in ```cvalues``` to specify which nodes to be updated. For example, ```setNodeLabels(net, {'label1', 'label2'}, {'A', 'B'})``` sets the labels of nodes with class value ```'A'``` to ```'label1'``` and nodes with class value ```'B'``` to ```'label2'```. This type of specification allows conditional formatting of nodes with respect to the node classes provided. By default, the first node class added by the [addNodeClass](addNodeClass.md) function is used map the class values to nodes.
-* ```net = setNodeLabels(net, classlabels, cvalues, cname)``` uses the node class with name ```cname``` to map the class values to nodes.
+* ```net = setNodeLabels(net, values)``` sets the node label of every node ```i``` to the string provided in ```values{i}```. Thus, the ```values``` should be cell array of length equal to the number of nodes. 
+* ```net = setNodeLabels(net, values, categories)``` uses the node class categories in ```categories``` to specify which nodes to be updated. For example, ```setNodeLabels(net, {'label1', 'label2'}, {'A', 'B'})``` sets the labels of nodes with category ```'A'``` to ```'label1'``` and nodes with category ```'B'``` to ```'label2'```. This type of specification allows conditional formatting of nodes with respect to the categories provided. By default, it is assumed that the categories correspond to the first node class added by the [addNodeClass](addNodeClass.md) function.
+* ```net = setNodeLabels(net, values, categories, classname)``` uses the node class with name ```classname``` for the provided categories.
 
 ### Examples
 
@@ -50,6 +49,6 @@ which produces:
 <img src="examples/setNodeLabels-2.png" width="300">
 
 ### See Also
-[networkvisualizer](networkvisualizer.md), [addNodeClass](addNodeClass.md)
+[addNodeClass](addNodeClass.md)
 
 
