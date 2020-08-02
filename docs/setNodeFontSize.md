@@ -24,7 +24,7 @@ net = setNodeFontSize(net, values, categories, classname)
 
 ### Examples
 
-#### Setting the node labels
+#### Setting the node labels with a constant font size
 
 ```Matlab
 rng(1, 'twister'); % For reproducibility
@@ -32,13 +32,14 @@ W = [0 1 1 0 0;1 0 0 1 1;1 0 0 0 0;0 0 0 0 1;1 0 1 0 0];
 labels = {'M30931','L07625','K03454','M27323','M15390'};
 net = networkvisualizer(W);
 net = setNodeLabels(net, labels);
+net = setNodeFontSize(net, 11);
 plot(net);
 ```
 which produces:
 
-<img src="examples/setNodeLabels-1.png" width="300">
+<img src="examples/setNodeFontSize-1.png" width="300">
 
-#### Updating labels using node classes
+#### Updating using node classes
 
 ```Matlab
 categories = {'M', 'L', 'K', 'M', 'M'}';
@@ -51,6 +52,6 @@ which produces:
 <img src="examples/setNodeLabels-2.png" width="300">
 
 ### See Also
-[addNodeClass](addNodeClass.md)
+[addNodeClass](addNodeClass.md), [setNodeLabels](setNodeLabels.md)
 
 
