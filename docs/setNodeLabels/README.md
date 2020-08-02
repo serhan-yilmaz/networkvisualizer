@@ -17,4 +17,4 @@ net = setNodeLabels(net, classlabels, cvalues, cname)
 
 ### Description
 * ```net = setNodeLabels(net, nodelabels)``` sets the node label of every node ```i``` to the string provided in ```nodelabels{i}```. Thus, the ```nodelabels``` should be cell array of length equal to the number of nodes. 
-* ```net = setNodeLabels(net, classlabels, cvalues)``` uses the node class values in ```cvalues``` to specify which nodes to be updated. For example, ```setNodeLabels(net, {'label1', 'label2'}, {'A', 'B'})``` sets the labels of nodes with class values ```'A'``` to ```'label1'``` and nodes with class values ```'B'``` to ```'label2'```. 
+* ```net = setNodeLabels(net, classlabels, cvalues)``` uses the node class values in ```cvalues``` to specify which nodes to be updated. For example, ```setNodeLabels(net, {'label1', 'label2'}, {'A', 'B'})``` sets the labels of nodes with class value ```'A'``` to ```'label1'``` and nodes with class value ```'B'``` to ```'label2'```. 
