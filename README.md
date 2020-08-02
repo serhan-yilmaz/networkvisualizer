@@ -18,6 +18,7 @@ For instructions on how to generate a highly customized figure like the one belo
 <img src="sample_output/tutorial_network.png" width="600">
 
 ## Demos
+Here are some network visualizations that are generated with this library as well as their source code. 
 
 ### Demo 1: Correlation Network
 
