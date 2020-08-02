@@ -22,6 +22,8 @@ net = setNodeLabels(net, classlabels, cvalues, cname)
 
 ### Examples
 
+##### Setting the node labels
+
 ```Matlab
 rng(1, 'twister'); % For reproducibility
 W = [0 1 1 0 0;1 0 0 1 1;1 0 0 0 0;0 0 0 0 1;1 0 1 0 0];
@@ -33,6 +35,19 @@ plot(net);
 which produces:
 
 <img src="examples/setNodeLabels-1.png" width="300">
+
+##### Updating labels using node classes
+
+```Matlab
+cvalues = {'M', 'L', 'K', 'M', 'M'}';
+net = addNodeClass(net, cvalues);
+net = setNodeLabels(net, {'Class M'}, 'M');
+net = setNodeFontSize(net, 12, 'M');
+plot(net);
+```
+which produces:
+
+<img src="examples/setNodeLabels-2.png" width="300">
 
 ### See Also
 [addNodeClass](addNodeClass.md)
