@@ -1,4 +1,4 @@
-### setNodeLabels (networkvisualizer)
+## setNodeLabels (networkvisualizer)
 Set the node labels of a networkvisualizer object.
 
 ### Syntax
