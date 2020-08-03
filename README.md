@@ -21,7 +21,7 @@ For instructions on how to generate a highly customized figure like the one belo
 Here are some network visualizations that are generated with this library as well as their source code. 
 
 ### Demo 1: Correlation Network
-See the [demo 1 script](demos/demo1.m) which produces:
+See the [demo 1 script](demos/demo_01.m) which produces:
 
 <img src="sample_output/demo1_network.png" width="600">
 
