@@ -2,9 +2,12 @@ classdef networkvisualizer < handle
     % To do ...
     % Add a legend entry based on the node colors
     
-    properties (SetAccess = private)
+    properties (SetAccess = public)
         X
         Y
+    end
+    
+    properties (SetAccess = private)
         NodeSizes
         Network
         EdgeList
