@@ -19,7 +19,7 @@ net = setNodeFontSize(net, values, categories, classname)
 ### Description
 * ```net = setNodeFontSize(net, k)``` sets the font size of all node labels to ```k```.
 * ```net = setNodeFontSize(net, values)``` sets the font size of every node ```i``` to the value provided in ```values(i)```. Thus, the ```values``` should be a vector of length equal to the number of nodes. 
-* ```net = setNodeFontSize(net, values, categories)``` uses the node class categories in ```categories``` to specify which nodes to be updated. For example, ```setNodeFontSize(net, {'label1', 'label2'}, {'A', 'B'})``` sets the labels of nodes with category ```'A'``` to ```'label1'``` and nodes with category ```'B'``` to ```'label2'```. This type of specification allows conditional formatting of nodes with respect to the categories provided. By default, it is assumed that the categories correspond to the first node class added by the [addNodeClass](addNodeClass.md) function.
+* ```net = setNodeFontSize(net, values, categories)``` uses the node class categories in ```categories``` to specify which nodes to be updated. For example, ```setNodeFontSize(net, {10, 12}, {'A', 'B'})``` sets the font size of nodes with category ```'A'``` to ```10``` and nodes with category ```'B'``` to ```'12```. This type of specification allows conditional formatting of nodes with respect to the categories provided. By default, it is assumed that the categories correspond to the first node class added by the [addNodeClass](addNodeClass.md) function.
 * ```net = setNodeFontSize(net, values, categories, classname)``` uses the node class with name ```classname``` for the provided categories.
 
 ### Examples
