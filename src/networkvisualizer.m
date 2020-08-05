@@ -96,7 +96,7 @@ classdef networkvisualizer < handle
                end
            end
         end
-        
+
         function [obj] = setNodeSizes(obj, values, classes, cname)
             if(nargin < 3); classes = []; end
             if(nargin < 4); cname = []; end
@@ -115,6 +115,15 @@ classdef networkvisualizer < handle
             obj = setNodeSizes(obj, values);
         end
         
+        % SETNODELABELS  Set the node labels of a networkvisualizer object.
+        %   net = setNodeLabels(net, values) 
+        %         sets the node label of every node i to the string provided in values{i}
+        %   net = setNodeLabels(net, values, categories) 
+        %         sets the label of the nodes that belongs to specified
+        %         category
+        %   net = setNodeLabels(net, values, categories, classname)
+        %         sets the label to the nodes within the categories which
+        %         specified by classname
         function [obj] = setNodeLabels(obj, values, classes, cname)
             if(nargin < 3); classes = []; end
             if(nargin < 4); cname = []; end
