@@ -18,7 +18,7 @@ net = setNodeSizes(net, values, categories, classname)
 
 ### Description
 * ```net = setNodeSizes(net, k)``` sets the size of all node to ```k```.
-* ```net = setNodeSizes(net, values)``` sets the node sizes of every node sets the node size of node ```i``` to the size provided in ```values{i}```. Thus, the ```values``` should be a vector of length equal to the number of nodes. 
+* ```net = setNodeSizes(net, values)``` sets the node sizes of every node ```i``` to the size provided in ```values{i}```. Thus, the ```values``` should be a vector of length equal to the number of nodes. 
 * ```net = setNodeSizes(net, values, categories)``` uses the node class categories in ```categories``` to specify which nodes to be resized. For example, ```setNodeSizes(net, {10, 12}, {'A', 'B'})``` sets the sizes of nodes with category ```'A'``` to ```10``` and nodes with category ```'B'``` to ```12```. This type of specification allows conditional formatting of nodes with respect to the categories provided. By default, it is assumed that the categories correspond to the first node class added by the [addNodeClass](addNodeClass.md) function.
 * ```net = setNodeSizes(net, values, categories, classname)``` uses the node class with name ```classname``` for the provided categories.
 
