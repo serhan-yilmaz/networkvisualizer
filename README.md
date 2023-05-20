@@ -1,7 +1,8 @@
 ## NetworkVisualizer (graph visualization library)
 <em>Effortlessly create visually appealing network figures with customizable node/edge properties and support for heterogeneous graphs. </em>
 
-[Matlab Central page](https://www.mathworks.com/matlabcentral/fileexchange/129854-networkvisualizer-graph-visualization-library) 
+[Matlab Central page](https://www.mathworks.com/matlabcentral/fileexchange/129854-networkvisualizer-graph-visualization-library)
+
 [Documentation](https://serhan-yilmaz.github.io/networkvisualizer/docs/index.html)
 
 ## Description 
