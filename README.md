@@ -20,8 +20,17 @@ With these features, NetworkVisualizer offers powerful tools for visualizing and
 ## Getting Started
 
 ```Matlab
-net = networkvisualizer(W);
-plot(net)
+rng(1, 'twister'); % For reproducibility
+% Generate a random network with 50 nodes and 100 edges
+nNode = 50;
+prepareRandomNetwork = @(n1, n2, numedges) logical(sparse(...
+   randi([1 n1], numedges, 1), randi([1 n2], numedges, 1), 1, n1, n2));
+W = prepareRandomNetwork(nNode, nNode, 100);
+% Set the nodeSizes randomly and create the networkvisualizer object
+nodeSizes = 4 + exprnd(3, nNode, 1);
+net = networkvisualizer(W, nodeSizes);
+% Plot the network
+figure(1); plot(net);
 ```
 
 ## Documentation
