@@ -97,7 +97,7 @@ figure(1); plot(net);
 
 ## Documentation
 
-For more detailed information, see the [documentation](https://serhan-yilmaz.github.io/networkvisualizer/docs/index.html).
+For more detailed information, see the [documentation](https://serhan-yilmaz.github.io/networkvisualizer/docs/networkvisualizer.html).
 
 ## Tutorial
 For instructions on how to generate a highly customized figure like the one below, see the [tutorial document](tutorial.pdf).
