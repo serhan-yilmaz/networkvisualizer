@@ -13,7 +13,7 @@ Some of the key features of NetworkVisualizer include:
 
 With these features, NetworkVisualizer offers powerful tools for visualizing and analyzing various types of networks, enabling users to create visually appealing and publication-quality network figures that showcase their data in an engaging and informative manner. The provided flexibility and functionality to effectively explore and present network data can make it a valuable tool for researchers, analysts, and data scientists. 
 
-Please note that the current version of NetworkVisualizer supports only undirected graphs. 
+<em> Please note that the current version of NetworkVisualizer supports only undirected graphs. </em>
 
 ## Getting Started
 
