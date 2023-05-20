@@ -7,7 +7,7 @@ NetworkVisualizer is a graph visualization library designed for Matlab. It provi
 The library is inspired by the ggplot2 library in R and utilizes a similar customization system. This allows users to easily modify the appearance and style of the generated graphs.
 
 Some of the key features of NetworkVisualizer include:
-* Support for variable node sizes: The library adapts the Fruchterman-Reingold algorithm to prevent node overlaps and accommodate networks with different node sizes.
+* <b> Support for variable node sizes</b>: The library adapts the Fruchterman-Reingold algorithm to prevent node overlaps and accommodate networks with different node sizes.
 * Customizable node/edge properties: Users have the flexibility to customize various properties such as labels, colors, line widths, line colors, font sizes, and curvatures for nodes, as well as line widths and colors for the edges. This allows for personalized visualizations that suit specific requirements.
 * Support for heterogeneous graphs with multiple node types: NetworkVisualizer seamlessly handles graphs with multiple node types, allowing for the representation of complex network structures. Furthermore, it enables customization of node and edge properties based on the type of the node, providing the ability to tailor the visual representation to specific nodes in the graph.
 
