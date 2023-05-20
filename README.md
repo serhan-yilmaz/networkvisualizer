@@ -24,7 +24,7 @@ plot(net)
 
 ## Documentation
 
-For more detailed information, see the [documentation](docs/setNodeLabels.md).
+For more detailed information, see the [documentation](https://serhan-yilmaz.github.io/networkvisualizer/docs/index.html).
 
 ## Tutorial
 For instructions on how to generate a highly customized figure like the one below, see the [tutorial document](tutorial.pdf).
