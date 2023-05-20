@@ -1,4 +1,4 @@
-# NetworkVisualizer (graph visualization library)
+## NetworkVisualizer (graph visualization library)
 Effortlessly create visually appealing network figures with customizable node/edge properties and seamless support for heterogeneous graphs with multiple node types. 
 
 ## Description 
