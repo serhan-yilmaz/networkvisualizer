@@ -1,9 +1,7 @@
 ## NetworkVisualizer (graph visualization library)
 <em>Effortlessly create visually appealing network figures with customizable node/edge properties and support for heterogeneous graphs. </em>
 
-[Matlab Central page](https://www.mathworks.com/matlabcentral/fileexchange/129854-networkvisualizer-graph-visualization-library)
-
-[Documentation](https://serhan-yilmaz.github.io/networkvisualizer/docs/index.html)
+[Matlab Central page](https://www.mathworks.com/matlabcentral/fileexchange/129854-networkvisualizer-graph-visualization-library), [Help page](https://serhan-yilmaz.github.io/networkvisualizer/docs/index.html)
 
 ## Description 
 NetworkVisualizer is a graph visualization library designed for Matlab. It provides a convenient and highly customizable way to create network/graph figures, especially for bioinformatics or biomedical networks such as protein-protein interactions (PPI). The library is particularly useful for heterogeneous networks with variable node sizes and prevents node overlaps. It is designed with small to moderate-sized networks ranging from 50 to 200 nodes in mind. 
