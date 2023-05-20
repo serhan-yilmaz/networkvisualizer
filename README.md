@@ -8,8 +8,8 @@ The library is inspired by the ggplot2 library in R and utilizes a similar custo
 
 Some of the key features of NetworkVisualizer include:
 * <b> Support for variable node sizes</b>: The library adapts the Fruchterman-Reingold algorithm to prevent node overlaps and accommodate networks with different node sizes.
-* Customizable node/edge properties: Users have the flexibility to customize various properties such as labels, colors, line widths, line colors, font sizes, and curvatures for nodes, as well as line widths and colors for the edges. This allows for personalized visualizations that suit specific requirements.
-* Support for heterogeneous graphs with multiple node types: NetworkVisualizer seamlessly handles graphs with multiple node types, allowing for the representation of complex network structures. Furthermore, it enables customization of node and edge properties based on the type of the node, providing the ability to tailor the visual representation to specific nodes in the graph.
+* <b> Customizable node/edge properties</b>: Users have the flexibility to customize various properties such as labels, colors, line widths, line colors, font sizes, and curvatures for nodes, as well as line widths and colors for the edges. This allows for personalized visualizations that suit specific requirements.
+* <b> Support for heterogeneous graphs with multiple node types</b>: NetworkVisualizer seamlessly handles graphs with multiple node types, allowing for the representation of complex network structures. Furthermore, it enables customization of node and edge properties based on the type of the node, providing the ability to tailor the visual representation to specific nodes in the graph.
 
 With these features, NetworkVisualizer offers powerful tools for visualizing and analyzing various types of networks, enabling users to create visually appealing and publication-quality network figures that showcase their data in an engaging and informative manner. The provided flexibility and functionality to effectively explore and present network data can make it a valuable tool for researchers, analysts, and data scientists. 
 
