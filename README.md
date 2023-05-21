@@ -95,23 +95,26 @@ net.setNodeSizes('auto');
 figure(1); plot(net);
 ```
 
-## Documentation
+### Output Figures
+<img src="sample_output/example0.png" width="300">
+<img src="sample_output/example1.png" width="300">
 
+## Documentation
 For more detailed information, see the [documentation](https://serhan-yilmaz.github.io/networkvisualizer/docs/networkvisualizer.html).
 
 ## Tutorial
-For instructions on how to generate a highly customized figure like the one below, see the [tutorial document](tutorial.pdf).
+For instructions on how to generate a highly customized figure like the one below, see the [tutorial document](tutorial.pdf) and the corresponding [script](demo_media_network.m).
 
 <img src="sample_output/tutorial_network.png" width="600">
 
 ## Demos
 Here are some network visualizations that are generated with this library as well as their source code. 
 
-### Demo 1: Correlation Network
-See the [demo 1 script](demos/demo_01.m) which produces:
+### Demo 1: Questionnaire Association Network
+See the [demo 1 script](demo_survey_association.m) which produces:
 
 <img src="sample_output/demo1_network.png" width="600">
 
-### Demo 2: Protein-Protein Interaction (PPI) Network
-
+### Demo 2: Kinase Protein-Protein Interaction (PPI) Network
+See the [demo 2 script](demos/demo_kinase_ppi.m) which produces:
 <img src="sample_output/demo2_network.png" width="750">
