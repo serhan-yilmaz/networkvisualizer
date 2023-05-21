@@ -6,6 +6,11 @@
 * [addEdgeClass](addEdgeClass.md)
 * [createEdgeClass](createEdgeClass.md)
 
+### Examples
+* [Demo (Media Network)](demos/demo_media_network.html)
+* [Demo (Kinase PPI Network)](demos/demo_kinase_ppi.html)
+* [Demo (Questionnaire Association)](demos/demo_survey_association.html)
+
 ### Setting node properties
 * [setNodeSizes](setNodeSizes.md)
 * [setNodeColors](setNodeColors.md)
