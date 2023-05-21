@@ -1,7 +1,7 @@
 ## setNodeLabels (networkvisualizer)
 Set the node labels of a networkvisualizer object.
 
-### Syntax
+### Syntax 
 ```Matlab
 net = setNodeLabels(net, values)
 net = setNodeLabels(net, values, categories)
@@ -48,6 +48,6 @@ which produces:
 <img src="examples/setNodeLabels-2.png" width="300">
 
 ### See Also
-[addNodeClass](addNodeClass.md), [setNodeFontSize](setNodeFontSize.md)
+[networkvisualizer](networkvisualizer.md), [addNodeClass](addNodeClass.md), [setNodeSizes](setNodeSizes.md), [setNodeFontSize](setNodeFontSize.md)
 
 

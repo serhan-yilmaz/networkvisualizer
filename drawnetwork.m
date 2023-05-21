@@ -6,6 +6,7 @@ function [] = drawnetwork( x, y, nodeSizes, W, axis, varargin)
     p = inputParser;
     p.CaseSensitive = false;
 %     addParameter(p, 'LineWidth', 0.75, @isnumeric);
+    addParameter(p, 'XRatio', 1, @isnumeric);
     addParameter(p, 'OuterGap', 0.05, @isnumeric);
     addParameter(p, 'FontSize', 10, @isnumeric);
     addParameter(p, 'NodeLabels', {}, @iscell);
@@ -13,10 +14,12 @@ function [] = drawnetwork( x, y, nodeSizes, W, axis, varargin)
     addParameter(p, 'NodeCurvature', [], @isnumeric);
     addParameter(p, 'NodeFontSize', [], @isnumeric);
     addParameter(p, 'NodeLineWidth', [], @isnumeric);
+    addParameter(p, 'NodeLineStyle', [], @iscell);
     addParameter(p, 'NodeLineColor', [], @isnumeric);
     addParameter(p, 'NodeLabelColor', [], @isnumeric);
     addParameter(p, 'EdgeColors', [], @isnumeric);
     addParameter(p, 'EdgeLineWidth', [], @isnumeric);
+    addParameter(p, 'EdgeLineStyle', [], @iscell);
     addParameter(p, 'FitNodeSizes', [], @islogical);
     addParameter(p, 'DrawOuterRectangle', false, @islogical);
     parse(p, varargin{:});
@@ -62,16 +65,17 @@ function [] = drawnetwork( x, y, nodeSizes, W, axis, varargin)
     end
     
     gap = param.OuterGap;
+    xratio = param.XRatio;
     aMin = min(x - nodeWidth/2)-gap;
     aMax = max(x + nodeWidth/2)+gap;
     bMin = min(y - nodeHeight/2)-gap;
     bMax = max(y + nodeHeight/2)+gap;
     aRange = aMax - aMin;
     bRange = bMax - bMin;
-    cRange = max(aRange, bRange);
+    cRange = max(aRange/xratio, bRange);
 
-    xMin = aMin - (cRange - aRange)/2;
-    xMax = aMax + (cRange - aRange)/2;
+    xMin = aMin - (cRange*xratio - aRange)/2;
+    xMax = aMax + (cRange*xratio - aRange)/2;
     yMin = bMin - (cRange - bRange)/2;
     yMax = bMax + (cRange - bRange)/2;
     
@@ -118,6 +122,12 @@ function [] = drawnetwork( x, y, nodeSizes, W, axis, varargin)
     else
         nodeLineColor = repmat([0 0 0], nNode, 1);
     end
+
+    if(~isempty(param.NodeLineStyle))
+        nodeLineStyle = param.NodeLineStyle;
+    else
+        nodeLineStyle = repmat({'-'}, nNode, 1);
+    end
    
     if(~isempty(param.NodeLabelColor))
         nodeLabelColor = param.NodeLabelColor;
@@ -135,6 +145,12 @@ function [] = drawnetwork( x, y, nodeSizes, W, axis, varargin)
         edgeLineWidth = param.EdgeLineWidth;
     else
         edgeLineWidth = repmat(0.65 * [1 1 1], nEdge, 1);
+    end
+
+    if(~isempty(param.EdgeLineStyle))
+        edgeLineStyle = param.EdgeLineStyle;
+    else
+        edgeLineStyle = repmat({'-'}, nEdge, 1);
     end
     
     rWidth = xMax - xMin;
@@ -154,17 +170,29 @@ function [] = drawnetwork( x, y, nodeSizes, W, axis, varargin)
 %     tic
     groupEdges = true;
     if(groupEdges)
-        [u, ib, ic] = unique([edgeLineWidth, edgeColors], 'rows');
-        for iGroup = 1:size(u, 1)
+        [~, ~, ix] = unique(edgeLineStyle);
+        [u, ib, ic] = unique([edgeLineWidth, edgeColors, ix], 'rows');
+        nGroup = size(u, 1);
+        if(nEdge == 1)
+            ib = 1;
+            ic = 1;
+            nGroup= 1;
+        end
+        
+        if(nEdge == 1)
+           nGroup = 1; 
+        end
+        for iGroup = 1:nGroup
 %         for iGroup = size(u, 1):-1:1
             ind = ic == iGroup;
             indices1 = i1(ind);
             indices2 = i2(ind);
             linewidth = edgeLineWidth(ib(iGroup));
             color = edgeColors(ib(iGroup), :);
+            line_style = edgeLineStyle{ib(iGroup)};
             
             plot(axis, [x(indices1), x(indices2)]', ...
-                [y(indices1), y(indices2)]', '-', ...
+                [y(indices1), y(indices2)]', line_style, ...
                 'Color', color, 'LineWidth', linewidth);
         end
 %         plot(axis, [x(i1); x(i2)]', [y(i1); y(i2)]', '-', 'Color', [0.65 0.65 0.65]);
@@ -194,10 +222,12 @@ function [] = drawnetwork( x, y, nodeSizes, W, axis, varargin)
         nodelinewidth = nodeLineWidth(i);
         nodelinecolor = nodeLineColor(i, :);
         nodelabelcolor = nodeLabelColor(i, :);
+        nodelinestyle = nodeLineStyle{i};
         rectangle(axis, 'Position', [xx yy width height], ...
             'Curvature', curvature, ...
             'FaceColor', color, ...
             'LineWidth', nodelinewidth, ...
+            'LineStyle', nodelinestyle, ...
             'EdgeColor', nodelinecolor);
         if(~isempty(nodeLabels{i}))
             txt = nodeLabels{i};
@@ -228,3 +258,13 @@ function [] = drawnetwork( x, y, nodeSizes, W, axis, varargin)
     set(axis, 'Visible', 'off');
 end
 
+function[width, height] = measureText(txt, opt, axis)
+    if(nargin < 3)
+       axis = gca(); 
+    end
+    hTest = text(axis, 0, 0, txt, opt);
+    textExt = get(hTest, 'Extent');
+    delete(hTest);
+    height = textExt(4);    %Height
+    width = textExt(3);     %Width
+end

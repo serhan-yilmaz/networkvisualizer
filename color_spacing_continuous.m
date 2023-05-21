@@ -1,4 +1,7 @@
 function [C] = color_spacing_continuous( values, breaks, colors)
+%     [nRow, nColumn] = size(values);
+    values = reshape(values, [], 1);
+
     indices = zeros(size(values));
     for i = 1:length(breaks)
        if(i ~= length(breaks))
@@ -15,5 +18,7 @@ function [C] = color_spacing_continuous( values, breaks, colors)
         ratio(ind) = (values(ind) - breaks(i)) / (ranges(i));        
     end
     C = (1-ratio).*colors(indices, :) + ratio.*colors(indices+1, :);
+    
+%     C = reshape(values, nRow, nColumn, 3);
 end
 

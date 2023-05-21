@@ -2,7 +2,7 @@
 Set the font size of node labels for a given networkvisualizer object.
 
 ### Syntax
-```Matlab
+```matlab
 net = setNodeFontSize(net, k)
 net = setNodeFontSize(net, values)
 net = setNodeFontSize(net, values, categories)
@@ -26,7 +26,7 @@ net = setNodeFontSize(net, values, categories, classname)
 
 #### Setting the node labels with a constant font size
 
-```Matlab
+```matlab
 rng(1, 'twister'); % For reproducibility
 W = [0 1 1 0 0;1 0 0 1 1;1 0 0 0 0;0 0 0 0 1;1 0 1 0 0];
 labels = {'M30931','L07625','K03454','M27323','M15390'};
@@ -41,7 +41,7 @@ which produces:
 
 #### Updating using node classes
 
-```Matlab
+```matlab
 categories = {'M', 'L', 'K', 'M', 'M'}';
 net = addNodeClass(net, categories);
 net = setNodeLabels(net, {'Category M'}, 'M');
@@ -52,6 +52,6 @@ which produces:
 <img src="examples/setNodeFontSize-2.png" width="300">
 
 ### See Also
-[addNodeClass](addNodeClass.md), [setNodeLabels](setNodeLabels.md)
+[networkvisualizer](networkvisualizer.md), [addNodeClass](addNodeClass.md), [setNodeLabels](setNodeLabels.md)
 
 

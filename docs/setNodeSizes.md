@@ -4,6 +4,8 @@ Set the node sizes of a networkvisualizer object.
 ### Syntax
 ```Matlab
 net = setNodeSizes(net, k)
+net = setNodeSizes(net, 'auto')
+net = setNodeSizes(net, 'manual')
 net = setNodeSizes(net, values)
 net = setNodeSizes(net, values, categories)
 net = setNodeSizes(net, values, categories, classname)
@@ -18,13 +20,15 @@ net = setNodeSizes(net, values, categories, classname)
 
 ### Description
 * ```net = setNodeSizes(net, k)``` sets the size of all node to ```k```.
+* ```net = setNodeSizes(net, 'auto')``` enables automatic resizing to accomodate node labels. 
+* ```net = setNodeSizes(net, 'manual')``` disables automatic resizing to accomodate node labels. 
 * ```net = setNodeSizes(net, values)``` sets the node sizes of every node ```i``` to the size provided in ```values{i}```. Thus, the ```values``` should be a vector of length equal to the number of nodes. 
 * ```net = setNodeSizes(net, values, categories)``` uses the node class categories in ```categories``` to specify which nodes to be resized. For example, ```setNodeSizes(net, {10, 12}, {'A', 'B'})``` sets the sizes of nodes with category ```'A'``` to ```10``` and nodes with category ```'B'``` to ```12```. This type of specification allows conditional formatting of nodes with respect to the categories provided. By default, it is assumed that the categories correspond to the first node class added by the [addNodeClass](addNodeClass.md) function.
 * ```net = setNodeSizes(net, values, categories, classname)``` uses the node class with name ```classname``` for the provided categories.
 
 ### Examples
 
-#### Setting the node labels
+#### Setting the node sizes
 
 ```Matlab
 rng(1, 'twister'); % For reproducibility
@@ -37,7 +41,7 @@ which produces:
 
 <img src="examples/setNodeSizes-1.png" width="300">
 
-#### Updating labels using node classes
+#### Updating node sizes using classes
 
 ```Matlab
 categories = {'M', 'L', 'K', 'M', 'M'}';
@@ -51,6 +55,6 @@ which produces:
 <img src="examples/setNodeSizes-2.png" width="300">
 
 ### See Also
-[addNodeClass](addNodeClass.md), [setNodeFontSize](setNodeFontSize.md)
+[networkvisualizer](networkvisualizer.md), [addNodeClass](addNodeClass.md), [setNodeLabels](setNodeLabels.md), [setNodeFontSize](setNodeFontSize.md)
 
 
