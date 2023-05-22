@@ -45,6 +45,9 @@ net = setNodeColors(net, nodeColors);
 figure(1); plot(net);
 ```
 
+#### Output:
+<img src="sample_output/example0.png" width="350">
+
 ### Example with Multiple Node Types
 ```
 rng(1, 'twister'); % For reproducibility
@@ -94,9 +97,8 @@ net.setNodeSizes('auto');
 % Draw the network again
 figure(1); plot(net);
 ```
-
-### Output Figures
-<img src="sample_output/example0.png" width="275"> <img src="sample_output/example1.png" width="275">
+#### Output:
+ <img src="sample_output/example1.png" width="350">
 
 ## Documentation
 For more detailed information, see the [documentation](https://serhan-yilmaz.github.io/networkvisualizer/docs/networkvisualizer.html).
