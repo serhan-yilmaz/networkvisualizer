@@ -112,10 +112,10 @@ For guidance on generating a tailored image similar to the one below, please vis
 Below are additional examples of network figures generated using this library, along with their source code and detailed instructions.
 
 ### 1 - Questionnaire Association Network
-To access detailed instructions and information, please refer to the [demo 1 page](https://serhan-yilmaz.github.io/networkvisualizer/docs/demos/demo_survey_association.html) and the corresponding [script](demo_survey_association.m) which generates the following:
+For detailed instructions and guidance, please refer to the [demo 1 page](https://serhan-yilmaz.github.io/networkvisualizer/docs/demos/demo_survey_association.html) and the corresponding [script](demo_survey_association.m) which generates the following:
 
 <img src="sample_output/demo1_network.png" width="600">
 
 ### 2 - Kinase Protein-Protein Interaction (PPI) Network
-For details and instructions, see the [demo 2 page](https://serhan-yilmaz.github.io/networkvisualizer/docs/demos/demo_kinase_ppi.html) and the corresponding [script](demo_kinase_ppi.m) which produces:
+For detailed instructions and guidance,  please refer to the [demo 2 page](https://serhan-yilmaz.github.io/networkvisualizer/docs/demos/demo_kinase_ppi.html) and the corresponding [script](demo_kinase_ppi.m) which generates the following:
 <img src="sample_output/demo2_network.png" width="750">
