@@ -117,5 +117,5 @@ For details and instructions, see the [demo 1 page](https://serhan-yilmaz.github
 <img src="sample_output/demo1_network.png" width="600">
 
 ### 2 - Kinase Protein-Protein Interaction (PPI) Network
-For details and instructions, see the [demo 2 page](https://serhan-yilmaz.github.io/networkvisualizer/docs/demos/demo_kinase_ppi.html) and the corresponding [script](demos/demo_kinase_ppi.m) which produces:
+For details and instructions, see the [demo 2 page](https://serhan-yilmaz.github.io/networkvisualizer/docs/demos/demo_kinase_ppi.html) and the corresponding [script](demo_kinase_ppi.m) which produces:
 <img src="sample_output/demo2_network.png" width="750">
