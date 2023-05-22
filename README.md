@@ -104,7 +104,7 @@ figure(1); plot(net);
 For more detailed information, see the [documentation](https://serhan-yilmaz.github.io/networkvisualizer/docs/networkvisualizer.html).
 
 ## Tutorial
-For instructions on how to generate a highly customized figure like the one below, see the [tutorial document](tutorial.pdf) and the corresponding [script](demo_media_network.m).
+For instructions on how to generate a highly customized figure like the one below, see the [tutorial page](https://serhan-yilmaz.github.io/networkvisualizer/docs/demos/demo_media_network.html) ([pdf link](tutorial.pdf)) and the corresponding [script](demo_media_network.m).
 
 <img src="sample_output/tutorial_network.png" width="600">
 
