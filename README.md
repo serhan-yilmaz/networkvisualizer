@@ -109,13 +109,13 @@ For instructions on how to generate a highly customized figure like the one belo
 <img src="sample_output/tutorial_network.png" width="600">
 
 ## Demos
-Here are some network visualizations that are generated with this library as well as their source code. 
+Below are some other examples of network figures generated with this library as well as their source code and step by step instructions.
 
 ### Demo 1: Questionnaire Association Network
-See the [demo 1 script](demo_survey_association.m) which produces:
+For details and instructions, see the [demo 1 page](https://serhan-yilmaz.github.io/networkvisualizer/docs/demos/demo_survey_association.html) and the corresponding [script](demo_survey_association.m) which produces:
 
 <img src="sample_output/demo1_network.png" width="600">
 
 ### Demo 2: Kinase Protein-Protein Interaction (PPI) Network
-See the [demo 2 script](demos/demo_kinase_ppi.m) which produces:
+For details and instructions, see the [demo 2 page](https://serhan-yilmaz.github.io/networkvisualizer/docs/demos/demo_kinase_ppi.html) and the corresponding [script](demos/demo_kinase_ppi.m) which produces:
 <img src="sample_output/demo2_network.png" width="750">
