@@ -45,6 +45,9 @@ net = setNodeColors(net, nodeColors);
 figure(1); plot(net);
 ```
 
+#### Output:
+<img src="sample_output/example0.png" width="300">
+
 ### Example with Multiple Node Types
 ```
 rng(1, 'twister'); % For reproducibility
@@ -94,26 +97,25 @@ net.setNodeSizes('auto');
 % Draw the network again
 figure(1); plot(net);
 ```
-
-### Output Figures
-<img src="sample_output/example0.png" width="275"> <img src="sample_output/example1.png" width="275">
+#### Output:
+ <img src="sample_output/example1.png" width="300">
 
 ## Documentation
 For more detailed information, see the [documentation](https://serhan-yilmaz.github.io/networkvisualizer/docs/networkvisualizer.html).
 
 ## Tutorial
-For instructions on how to generate a highly customized figure like the one below, see the [tutorial document](tutorial.pdf) and the corresponding [script](demo_media_network.m).
+For instructions on how to generate a highly customized figure like the one below, see the [tutorial page](https://serhan-yilmaz.github.io/networkvisualizer/docs/demos/demo_media_network.html) ([pdf link](tutorial.pdf)) and the corresponding [script](demo_media_network.m).
 
 <img src="sample_output/tutorial_network.png" width="600">
 
 ## Demos
-Here are some network visualizations that are generated with this library as well as their source code. 
+Below are some other examples of network figures generated with this library as well as their source code and step by step instructions.
 
-### Demo 1: Questionnaire Association Network
-See the [demo 1 script](demo_survey_association.m) which produces:
+### 1 - Questionnaire Association Network
+For details and instructions, see the [demo 1 page](https://serhan-yilmaz.github.io/networkvisualizer/docs/demos/demo_survey_association.html) and the corresponding [script](demo_survey_association.m) which produces:
 
 <img src="sample_output/demo1_network.png" width="600">
 
-### Demo 2: Kinase Protein-Protein Interaction (PPI) Network
-See the [demo 2 script](demos/demo_kinase_ppi.m) which produces:
+### 2 - Kinase Protein-Protein Interaction (PPI) Network
+For details and instructions, see the [demo 2 page](https://serhan-yilmaz.github.io/networkvisualizer/docs/demos/demo_kinase_ppi.html) and the corresponding [script](demo_kinase_ppi.m) which produces:
 <img src="sample_output/demo2_network.png" width="750">
