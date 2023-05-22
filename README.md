@@ -101,7 +101,7 @@ figure(1); plot(net);
  <img src="sample_output/example1.png" width="300">
 
 ## Documentation
-For more detailed information, see the [documentation](https://serhan-yilmaz.github.io/networkvisualizer/docs/networkvisualizer.html).
+For more detailed information, please refer to the [documentation page](https://serhan-yilmaz.github.io/networkvisualizer/docs/networkvisualizer.html).
 
 ## Tutorial
 For guidance on generating a tailored image similar to the one below, please visit the [tutorial page](https://serhan-yilmaz.github.io/networkvisualizer/docs/demos/demo_media_network.html) ([PDF link](tutorial.pdf)) and refer to the corresponding [script](demo_media_network.m) for step-by-step instructions.
