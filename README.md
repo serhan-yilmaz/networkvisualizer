@@ -109,7 +109,7 @@ For guidance on generating a tailored image similar to the one below, please vis
 <img src="sample_output/tutorial_network.png" width="600">
 
 ## Demos
-Below are some other examples of network figures generated with this library as well as their source code and step by step instructions.
+Below are additional examples of network figures generated using this library, along with their source code and detailed instructions.
 
 ### 1 - Questionnaire Association Network
 For details and instructions, see the [demo 1 page](https://serhan-yilmaz.github.io/networkvisualizer/docs/demos/demo_survey_association.html) and the corresponding [script](demo_survey_association.m) which produces:
