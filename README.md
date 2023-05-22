@@ -46,7 +46,7 @@ figure(1); plot(net);
 ```
 
 #### Output:
-<img src="sample_output/example0.png" width="350">
+<img src="sample_output/example0.png" width="325">
 
 ### Example with Multiple Node Types
 ```
@@ -98,7 +98,7 @@ net.setNodeSizes('auto');
 figure(1); plot(net);
 ```
 #### Output:
- <img src="sample_output/example1.png" width="350">
+ <img src="sample_output/example1.png" width="325">
 
 ## Documentation
 For more detailed information, see the [documentation](https://serhan-yilmaz.github.io/networkvisualizer/docs/networkvisualizer.html).
